@@ -35,7 +35,7 @@
         *::after {
             box-sizing: border-box;
             margin: 0;
-            padding: 0
+            padding: 2px
         }
 
         html {
@@ -78,14 +78,17 @@
 
         /* Header */
         header {
-            padding: max(20px, env(safe-area-inset-top)) 0 20px
+            padding: max(30px, env(safe-area-inset-top)) 0 20px;
+            max-width: 1200px;
+            width: 100%;   
+            margin: 0 auto;
         }
 
         .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 12px
+            gap: 12px;
         }
 
         .brand {
@@ -95,6 +98,13 @@
             font-family: var(--display);
             font-weight: 800;
             font-size: clamp(1.1rem, 1rem + .8vw, 1.4rem)
+        }
+
+        .brand-logo {
+            flex: none;
+            object-fit: contain;
+            border-radius: 12px;
+            filter: brightness(0) invert(1);
         }
 
         .brand-mark {
@@ -575,9 +585,10 @@
 <body>
 
     <header>
-        <div class="wrap nav">
+        <div class="nav">
             <div class="brand">
-                <div class="brand-mark" aria-hidden="true">S</div><span class="name">Signhvi Stores</span>
+                <img class="brand-logo" src="./logo.png" width="150" alt="Signhvi Stores logo">
+                <!-- <span class="name">Signhvi Stores</span> -->
             </div>
             <a class="pill" href="#contact">Contact us</a>
         </div>
@@ -696,7 +707,8 @@
             <div class="foot">
                 <div>
                     <div class="brand" style="margin-bottom:10px">
-                        <div class="brand-mark" aria-hidden="true">S</div><span class="name">Signhvi Stores</span>
+                        <!-- <div class="brand-mark" aria-hidden="true">S</div><span class="name">Signhvi Stores</span> -->
+                        <img class="brand-logo" src="./logo.png" width="150" alt="Signhvi Stores logo">
                     </div>
                     <p>Mixers and grinders. Also irons, kettles and fans.</p>
                 </div>
